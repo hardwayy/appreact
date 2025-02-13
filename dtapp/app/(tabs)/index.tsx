@@ -6,7 +6,8 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-
+import React from 'react';
+import RenderImageFile from '../../components/renderImageFile';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
@@ -17,12 +18,8 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
-      <TitleController imgsrc={require('../../images/download.jpg')}
-        title="Linus Tech"
-        description="4B.42$"></TitleController>
-        <TitleController imgsrc={require('../../assets/images/favicon.png')}
-        title="io"
-        description="0.4$"></TitleController>
+
+      <RenderImageFile length={3}></RenderImageFile>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
